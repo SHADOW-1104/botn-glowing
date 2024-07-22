@@ -3,12 +3,18 @@ body{
     display: grid;
     place-items: center;
     text-align: center;
-    background-color: #263D42;
+    background-color: #000100;
+}
+
+.container{
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
 
 .btn{
     position: relative;
-    background-color: black;
+    background-color: transparent;
     cursor: pointer;
     color: white;
     border: none;
@@ -22,8 +28,9 @@ body{
 .btn::before{
     content: '';
     position: absolute;
-    top: 0;
-    left: 0;
+    padding: 2px;
+    top: -2px;
+    left: -2px;
     z-index: -1;
     width: 100%;
     height: 100%;
@@ -32,19 +39,20 @@ body{
     );
     background-size: 800%;
     border-radius: 10px;
-    filter: blur(3px);
+    filter: blur(2px);
     animation: glowing 10s alternate infinite ;
 }
 
 .btn::after{
     content: '';
     position: absolute;
+    inset: 5px;
     top: 0;
     left: 0;
     z-index: -1;
     width: 100%;
     height: 100%;
-    background-color: black;
+    background-color: #197BBD;
     border-radius: 10px;
 
 }
